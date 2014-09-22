@@ -8,7 +8,7 @@ var argv = require('argv'),
     htmlparser = require('htmlparser2'),
     http = require('http'),
     fs = require('fs'),
-    version = '0.3',
+    version = '0.3.1',
     savePath,
     dailyJamHTML,
     title,
@@ -60,7 +60,7 @@ function fetchHTML() {
 }
 
 function parseHTML() {
-    console.log('   Parsing...')
+    console.log('   Parsing...');
     var grabTitle = false,
         grabArtist = false,
         fileURL;
@@ -91,7 +91,7 @@ function parseHTML() {
 }
 
 function downloadTrack(url, dest, cb) {
-    console.log('   Downloading... (be patient, this takes a wee while)')
+    console.log('   Downloading... (be patient, this takes a wee while)');
     var filename = url.substring(url.lastIndexOf('/'));
     dest += filename.substring(dest[dest.length - 1] !== '/' ? 0 : 1);
     var file = fs.createWriteStream(dest);
@@ -110,7 +110,7 @@ function downloadTrack(url, dest, cb) {
             console.log('Rats! This happened while downloading: ' + err.message);
             process.exit(2);
         });
-};
+}
 
 function onComplete() {
     console.log('Done! Check out ' + title + ' by ' + artist + ' at ' + savePath + ' and kick out the jam!');
