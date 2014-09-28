@@ -4,19 +4,21 @@
  * Downloads the daily jam from DailyJam.co.nz.  ./EatDailyJam -d /path/to/save/to
  */
 
+"use strict";
+
 var argv = require('argv'),
     htmlparser = require('htmlparser2'),
     http = require('http'),
     fs = require('fs'),
-    version = '0.3.1',
     savePath,
     dailyJamHTML,
     title,
     artist;
 
 function start() {
-    console.log('Eat Daily Jam v ' + version);
-    argv.version(version);
+    var pjson = require('./package.json');
+    console.log('Eat Daily Jam v ' + pjson.version);
+    argv.version(pjson.version);
     argv.option({
         name: 'directory',
         short: 'd',
@@ -96,7 +98,7 @@ function downloadTrack(url, dest, cb) {
     dest += filename.substring(dest[dest.length - 1] !== '/' ? 0 : 1);
     var file = fs.createWriteStream(dest);
     file.on('error', function (err) {
-        console.log('Arse. This happened writing the file: ' + err);
+        console.log('Doh. This happened writing the file: ' + err);
         process.exit(3);
     });
 
