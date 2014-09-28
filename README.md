@@ -13,14 +13,18 @@ you'll get a batch of new tunes without having done anything.  Sweet. We're all 
 
 Ensure you have node and npm installed by executing
 
+```ShellSession
 node --version
+```
 
 at your command line and see it report Node version at least 0.10. If you are behind or node is not installed,
 install / update it from http://nodejs.org/.
 
 Once that is sorted, globally install eat-daily-jam by executing
 
+```ShellSession
 npm install -g eat-daily-jam
+```
 
 at the command line, which should install the program without error.
 
@@ -28,7 +32,9 @@ at the command line, which should install the program without error.
 
 Once EatDailyJam is installed, test it works OK, it should, by executing this at your command line:
 
+```ShellSession
 eat-daily-jam -d .
+```
 
 you should see the program have a bit of a chat to you and in the end a music track shows up in your current directory.
 
