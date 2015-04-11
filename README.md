@@ -1,7 +1,7 @@
-EatDailyJam
+EatDailyJam - NO LONGER FUNCTIONAL
 ===========
 
-Downloads todays Daily Jam from dailyjam.co.nz.
+USED TO Download todays Daily Jam from dailyjam.co.nz. BUT now it doesn't because website shut down. Sorry. It was great while it lasted.  The code is left up in case it's ever of use to someone... yeah me neither.
 
 This node.js command line app downloads the day's free music MP3 file from DailyJam.co.nz.
 
